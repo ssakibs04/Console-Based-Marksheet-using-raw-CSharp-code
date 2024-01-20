@@ -1,0 +1,160 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Remoting.Messaging;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Statement_Practice
+{
+	internal class Program
+	{
+		static void Main(string[] args)
+		{
+			//Students Details input
+            Console.WriteLine(	"Enter Student Name: ");
+            string name = Console.ReadLine();
+			Console.WriteLine("Enter Student Roll: ");
+			int roll =int.Parse(Console.ReadLine());
+			Console.WriteLine("Enter Student's Class: ");
+			int standard = int.Parse(Console.ReadLine());
+			//marks input
+			Console.WriteLine("Enter Bangla Marks: ");
+			int bangla = int.Parse(Console.ReadLine());
+			Console.WriteLine("Enter English Marks: ");
+			int english = int.Parse(Console.ReadLine());
+			Console.WriteLine("Enter Math Marks: ");
+			int math = int.Parse(Console.ReadLine());
+			Console.WriteLine("Enter Physics Marks: ");
+			int physics = int.Parse(Console.ReadLine());
+			Console.WriteLine("Enter Chemistry Marks: ");
+			int chemistry = int.Parse(Console.ReadLine());
+			Console.WriteLine("Enter ICT Marks: ");
+			int ict = int.Parse(Console.ReadLine());
+
+
+
+            //marksheet Print 
+            Console.WriteLine(	"-------------------Marksheet-------------------");
+            Console.WriteLine("Student Name: "+name);
+			Console.WriteLine("Sudent Roll: " + roll);
+			Console.WriteLine("Student Class: " + standard);
+
+			//calculate total marks
+
+			int total = bangla + english + math + physics + chemistry + ict;
+            Console.WriteLine("Student;s Total Marks: "+total);
+
+			//percentage
+
+			int percentage = total / 6;
+			Console.WriteLine("Percetage: {0}%", percentage);
+
+			//Grade
+
+			if(percentage >= 80)
+			{
+
+				Console.WriteLine("Grade: A+");
+			}
+
+			 else if (percentage >= 70)
+			{
+				Console.WriteLine("Grade: A");
+			}
+				else if (percentage >= 60)
+			{
+				Console.WriteLine("Grade: B");
+			}
+				else if (percentage >= 50)
+			{
+				Console.WriteLine("Grade: C");
+			}
+				else if (percentage >= 40)
+			{
+				Console.WriteLine("D");
+			}
+			
+				
+			
+			else { Console.WriteLine(	"F"); }
+		Console.ReadLine();
+
+			//Remarks
+
+			if (percentage >= 80)
+			{
+
+				Console.WriteLine("Remarks : Excellent ");
+			}
+
+			else if (percentage >= 70)
+			{
+				Console.WriteLine("Remarks : Well Done");
+			}
+			else if (percentage >= 60)
+			{
+				Console.WriteLine("Remarks : Need to improve");
+			}
+			else if (percentage >= 50)
+			{
+				Console.WriteLine("Remarks : Need more Improvement");
+			}
+			else if (percentage >= 40)
+			{
+				Console.WriteLine("Remarks: Very bad");
+			}
+
+
+
+			else { Console.WriteLine("Remarks: Bring you parents tomorrow"); }
+			Console.ReadLine();
+
+
+			//Suppy
+
+			int supply = 0;
+
+			if (bangla < 33)
+			{
+				supply++;
+			}
+			
+			 if (english < 33)
+			{
+				supply++;
+
+			}
+			
+			 if (math < 33)
+			{
+				supply++;
+
+			}
+			
+			 if (physics < 33)
+			{
+				supply++;
+
+			}
+			
+			 if (chemistry < 33)
+			{
+				supply++;
+			}
+			 if (ict < 33)
+			{
+				supply++;
+			}
+            Console.WriteLine("{0} failed in {1} subjects",name,supply);
+
+
+            Console.WriteLine("Thank You");
+            Console.ReadLine();
+
+			 
+        }
+
+
+	}
+}
